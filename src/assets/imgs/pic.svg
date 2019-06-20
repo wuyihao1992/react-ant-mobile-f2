@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>照片</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="成绩模版管理／成绩管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="成绩管理-copy-7" transform="translate(-1116.000000, -709.000000)">
+            <g id="照片" transform="translate(1116.000000, 710.000000)">
+                <path d="M4.94999527,6.00250182 C5.06798904,5.99060092 5.19062845,6.02039021 5.29408585,6.09563196 L10.7940858,10.095632 C11.0174122,10.2580511 11.0667872,10.5707595 10.904368,10.7940858 C10.7419489,11.0174122 10.4292405,11.0667872 10.2059142,10.904368 L4.9514899,7.08296859 L1.60941052,9.54328348 C1.38702838,9.70699297 1.07403928,9.65942938 0.910329798,9.43704724 C0.746620314,9.2146651 0.794183899,8.901676 1.01656604,8.73796652 L4.60357776,6.09734152 C4.70743338,6.02088686 4.83105058,5.99051134 4.94999527,6.00250182 Z" id="Combined-Shape" fill-opacity="0.5" fill="#666666"></path>
+                <path d="M12.5,7.5 L14.5,8.5" id="Line-22" stroke="#B2B2B2" stroke-linecap="round"></path>
+                <path d="M12.5,7.5 L9.97363281,9.46728516" id="Line-22-Copy" stroke="#B2B2B2" stroke-linecap="round"></path>
+                <path d="M15,5.80086263 L15,11.6666667 L15,11.6666667 C15,12.9553311 13.9553311,14 12.6666667,14 L3.33333333,14 L3.33333333,14 C2.04466892,14 1,12.9553311 1,11.6666667 L1,2.33333333 L1,2.33333333 C1,1.04466892 2.04466892,0 3.33333333,0 L3.33333333,0 L12.6666667,0 L12.6666667,0 C13.9553311,0 15,1.04466892 15,2.33333333 L15,2.38061523" id="Rectangle-49" stroke="#666666" stroke-linecap="round"></path>
+                <circle id="Oval-30" stroke-opacity="0.2" stroke="#666666" cx="10.5" cy="3.5" r="1.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

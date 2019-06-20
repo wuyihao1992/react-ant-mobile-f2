@@ -1,0 +1,222 @@
+//@import "../../components/theme/less/mixins/index";
+
+:global {
+  html, body{
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: #3390ff;
+    color: #fff;
+  }
+  .Main-root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    font-family: "PingFangSC-Regular", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .Main-container {
+    min-width: 1366px;
+  }
+
+  .Main-container.Main-container-menuCollpased {
+    .Main-leftArea{
+      width: 60px;
+    }
+
+    .Main-rightArea {
+      margin-left: 60px;
+    }
+  }
+
+  .Main-leftArea{
+    position: relative;
+    float: left;
+    height: 100vh;
+    width: 227px;
+    background: #2C3441;
+    overflow: hidden;
+    transition: width .25s;
+  }
+
+  .Main-rightArea {
+    position: relative;
+    margin-left: 227px;
+    height: 100vh;
+    overflow: hidden;
+    transition: margin-left .25s;
+  }
+  .Main-rightArea > .ant-tabs {
+
+    & > .ant-tabs-bar {
+      //border: 1px solid @basicColorBorder;
+      //border-radius: @borderRadiusLg;
+      margin: 5px 20px;
+      height: 40px;
+      padding-right: 105px;
+      //background: @basicColor;
+    }
+    &.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
+      height: 100%;
+      line-height: 38px;
+    }
+    &.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-wrap {
+      height: 100%;
+    }
+    .ant-tabs-nav-scroll {
+      height: 100%;
+    }
+    .ant-tabs-nav {
+      height: 100%;
+    }
+
+    & > .ant-tabs-bar .ant-tabs-tab-prev, .ant-tabs-tab-next {
+      margin-top: 0;
+    }
+
+    & > .ant-tabs-bar .ant-tabs-tab {
+      border: none;
+      padding: 0 48px;
+      //border-radius: @borderRadiusLg;
+      margin-right: 0;
+      //color: @fontColorSecondary;
+      transition: none;
+      position: relative;
+      background: transparent;
+      font-size: 14px;
+      &:hover {
+        //color: @fontColor;
+      }
+    }
+
+    & > .ant-tabs-bar .ant-tabs-tab + .ant-tabs-tab:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 1px;
+      top: 8px;
+      height: 22px;
+      //background: @inputBorderColor;
+    }
+
+    & > .ant-tabs-bar .ant-tabs-tab-active {
+      background: #fff;
+      //color: @fontColor;
+      border-color: transparent;
+      //box-shadow: @shadowPanel;
+      //border-radius: @borderRadiusLg;
+    }
+
+    & > .ant-tabs-bar .ant-tabs-tab.ant-tabs-tab-active + .ant-tabs-tab:before,
+    & > .ant-tabs-bar .ant-tabs-tab + .ant-tabs-tab.ant-tabs-tab-active:before {
+      background: transparent;
+    }
+
+    & > .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab .anticon-close{
+      position: absolute;
+      right: 8px;
+      top: 6px;
+      padding: 0 2px;
+      display: none;
+      &:hover{
+        //color: @fontColorSecondary;
+      }
+    }
+
+    & > .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab:hover .anticon-close,
+    & > .ant-tabs-bar .ant-tabs-nav .ant-tabs-tab.ant-tabs-tab-active .anticon-close{
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      line-height: 16px;
+      text-align: center;
+      margin-top: 5px;
+      border-radius: 50%;
+      opacity: 1;
+      &:hover {
+        color: #fff;
+        //background: @primaryColor;
+      }
+      &:before {
+        position: relative;
+        left: -1px;
+        top: 1px;
+      }
+    }
+
+    & > .ant-tabs-content {
+      position: relative;
+      height: calc(~'100vh - 110px');
+      z-index: 2;
+    }
+
+    & > .ant-tabs-content > .ant-tabs-tabpane.ant-tabs-tabpane-active {
+      height: 100%;
+    }
+
+    &.ant-tabs-editable-card > .ant-tabs-bar .ant-tabs-tab:not(.ant-tabs-tab-active):hover > div:not(.ant-tabs-tab-unclosable) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &.no-flex > .ant-tabs-content > .ant-tabs-tabpane-inactive,
+    &.ant-tabs-no-animation > .ant-tabs-content > .ant-tabs-tabpane-inactive,
+    &.ant-tabs-vertical > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+      display: block;
+    }
+
+  }
+
+}
+
+.notice{
+  margin: 6px 20px;
+  font-size: 12px;
+}
+.logoArea {
+  background-color: #6D67FF;
+  height: 59px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.logo {
+  background-image: url(ASSET/imgs/logo.svg);
+  width: 227px;
+  height: 59px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: margin .35s, width .35s, opacity .3s ease .05s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.logoHide {
+    width: 208px;
+    margin: 1px 0 0 -18px;
+    opacity: 0;
+  }
+}
+.logoSmall {
+  background-image: url(ASSET/imgs/logoSmall.svg);
+  width: 59px;
+  height: 59px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: opacity .3s ease .05s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.logoSmallHide {
+    opacity: 0;
+  }
+}
