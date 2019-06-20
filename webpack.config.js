@@ -4,28 +4,32 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 var path = require('path');
 const webpack = require('webpack');
 
-var rootPath = path.resolve(__dirname), // 项目根目录
-  src = path.join(rootPath, 'src'); // 开发源码目录
+var rootPath = path.resolve(__dirname); // 项目根目录
+var src = path.join(rootPath, 'src');   // 开发源码目录
+
+// src下的目录
+var resolveSrc = function (dir) {
+  return path.join(__dirname, 'src/', dir);
+};
 
 let envToBeInjected = {
   BUILD_ENV: JSON.stringify(process.env.BUILD_ENV)
 };
 
+// 自定义路径别名
 let alias = {
-  // 自定义路径别名
   SRC: src,
-  ASSET: path.join(src, 'assets'),
-  COMPONENT: path.join(src, 'components'),
-  MODEL: path.join(src, 'models'),
-  PAGE: path.join(src, 'pages'),
-  SERVICE: path.join(src, 'services'),
-  UTIL: path.join(src, 'utils'),
-  VIEW: path.join(src, 'views'),
-  CONST: path.join(src, 'constants'),
-}
+  ASSET: resolveSrc('assets'),
+  COMPONENT: resolveSrc('components'),
+  MODEL: resolveSrc('models'),
+  PAGE: resolveSrc('pages'),
+  SERVICE: resolveSrc('services'),
+  UTIL: resolveSrc('common/utils'),
+  CONST: resolveSrc('constants'),
+};
+
 module.exports = function(webpackConfig, env) {
   // 对roadhog默认配置进行操作，比如：
-
   if (env === 'production' && !/\.dll\.js$/.test(webpackConfig.output.filename)) {
     webpackConfig.module.rules.forEach((rule) => {
       if (String(rule.test) === '/\\.less$/' || String(rule.test) === '/\\.css$/'){

@@ -7,10 +7,10 @@ import common from "./common";
 function RouterConfig({ history, app }) {
   const routes = [
     {
-      path: "/",
+      path: '/',
       getComponent(nextState, cb) {
         require.ensure([], require => {
-          cb(null, require('VIEW/Main'));
+          cb(null, require('PAGE/main'));
         });
       }
     },
