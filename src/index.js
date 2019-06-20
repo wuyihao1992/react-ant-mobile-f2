@@ -1,4 +1,4 @@
-import app from 'SRC/app'
+import app from './app'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
 import './index.html'
@@ -15,7 +15,7 @@ moment.locale('zh-cn');
 
 // 3. Model
 app.model(require('MODEL/account'));
-app.model(require('MODEL/dict'));
+// app.model(require('MODEL/dict'));
 
 // 4. Router
 app.router(require('./routes/index'));
