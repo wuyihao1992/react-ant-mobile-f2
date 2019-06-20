@@ -1,6 +1,3 @@
-/**
- * Created by Haolin<haolinhom@gmail.com> on 2018/8/3.
- */
 import appPEIYOU from 'ASSET/imgs/appdownloadpageAplus.png'
 import appXINGHUO from 'ASSET/imgs/appdownloadpageXingHuo.png'
 import {

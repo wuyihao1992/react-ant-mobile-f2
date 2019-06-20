@@ -8,10 +8,10 @@ import 'UTIL/GlobalEvent/index.js';
 moment.locale('zh-cn');
 
 // 1. Initialize
-//移至SRC/app模块
+// 移至SRC/app模块
 
 // 2. Plugins
-//app.use(createLoading())
+// app.use(createLoading())
 
 // 3. Model
 app.model(require('MODEL/account'));

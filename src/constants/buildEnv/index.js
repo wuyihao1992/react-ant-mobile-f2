@@ -1,6 +1,3 @@
-/**
- * Created by Haolin<haolinhom@gmail.com> on 2018/10/25.
- */
 // 星火
 const uat = 'UAT';
 const pre = 'PRE';

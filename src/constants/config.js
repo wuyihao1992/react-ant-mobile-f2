@@ -19,8 +19,6 @@ const errors = {
   serverError: { errorType: 4, text: '服务器错误，请联系管理员' },
 };
 
-const OLDPAGEBASE = '/oldPage';
-const WELCOMEHTML = 'function/welcome.html';
 // 无需java调试旧Boss前端页面
 const PROXY_OLD_BOSS = process.env.PROXY_OLD_BOSS;
 const PROXY_OLD_BOSS_URL = process.env.PROXY_OLD_BOSS_URL;
@@ -63,8 +61,6 @@ if (process.env) {
 export {
   urlBase,
   errors,
-  OLDPAGEBASE,
-  WELCOMEHTML,
   PROJECT_NAME,
   SYSTEM_MARK,
   OSSPREFIX,

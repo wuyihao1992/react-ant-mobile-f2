@@ -32,7 +32,6 @@ const stayedTimeModel = cubec.model({
       });
     }
   }
-
 });
 
 class Main extends React.Component {
