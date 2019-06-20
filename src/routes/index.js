@@ -2,7 +2,7 @@ import React from "react";
 import { Router } from "dva/router";
 import registerModel from "UTIL/registerModel";
 
-import common from "./commonPages";
+import common from "./common";
 
 function RouterConfig({ history, app }) {
   const routes = [

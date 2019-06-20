@@ -1,4 +1,4 @@
-import { addNavs } from '../common'
+import { addNavs } from '../util'
 
 const routes = [
 ]
