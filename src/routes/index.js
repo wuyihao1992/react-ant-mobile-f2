@@ -10,21 +10,11 @@ function RouterConfig({ history, app }) {
       path: "/",
       getComponent(nextState, cb) {
         require.ensure([], require => {
-          cb(null, require("VIEW/Main"));
-        });
-      },
-      childRoutes: [
-        ...common,
-      ]
-    },
-    {
-      path: "*",
-      getComponent(nextState, cb) {
-        require.ensure([], require => {
-          cb(null, require("VIEW/404"));
+          cb(null, require('VIEW/Main'));
         });
       }
-    }
+    },
+    ...common
   ];
 
   return <Router history={history} routes={routes} />;
