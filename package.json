@@ -20,7 +20,7 @@
   },
   "homepage": "http://localhost:8088/eduboss/",
   "dependencies": {
-    "antd": "^2.12.2",
+    "@antv/f2": "^3.3.9",
     "antd-mobile": "^2.2.14",
     "babel-runtime": "^6.22.0",
     "classnames": "^2.2.5",

@@ -2,7 +2,7 @@ import app from './app'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
 import './index.html'
-import './GlobalEmitter'
+import 'UTIL/GlobalEmitter'
 import 'UTIL/GlobalEvent/index.js';
 import 'ASSET/style/base.less';
 
