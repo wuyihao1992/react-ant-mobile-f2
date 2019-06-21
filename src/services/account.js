@@ -9,7 +9,6 @@ import {
   twoTeacherPre,
   twoTeacher,
 } from 'CONST/buildEnv';
-import { urlBase } from 'CONST/config'
 import * as Qiyu from 'SERVICE/qiyukf'
 
 const subfixConfig = {
@@ -78,9 +77,8 @@ if (process.env) {
 //跳转到登录页面
 const gotoLoginPage = () => {
   const href = host + subfix + '?redirect_uri=' + encodeURIComponent(window.location.origin+'/oauth2Callback')
-  // console.log('login', href)
   window.location.href = href
-}
+};
 
 //退出登录
 //const logout = () => window.location.href = `${urlBase}j_spring_security_logout`  //退出登录（旧）

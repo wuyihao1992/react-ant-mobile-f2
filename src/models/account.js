@@ -1,7 +1,6 @@
 import { routerRedux } from 'dva/router'
-import { login, getLoginUserInfo, getButtonAuthTags, getUserToken, getCookieCallsPhoneCheckFail } from 'SERVICE/common'
+import { login, getLoginUserInfo, getButtonAuthTags, getUserToken, getCookieCallsPhoneCheckFail, existUserId } from 'SERVICE/common'
 import { logout } from 'SERVICE/account'
-import { existUserId } from 'SERVICE/system'
 import { urlBase } from 'CONST/config'
 import importGrowingio from 'SERVICE/growingio'
 import checkBrowser from 'SERVICE/checkBrowser'
