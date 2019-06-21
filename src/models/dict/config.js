@@ -1,10 +1,7 @@
-/**
- * Created by Haolin<haolinhom@gmail.com> on 2019/2/20.
- */
 import {
-  getDictValByText, getDictTextByVal, loadCommonDict, loadBranchDict,
+  loadCommonDict, loadBranchDict,
   loadCampusDict, loadBranchCampusDict, loadClassLevelDict,
-  loadDictByFather, loadMainClassTcDict, loadAuxClassTcDict,
+  loadMainClassTcDict, loadAuxClassTcDict,
   loadAllMainClassTcDict, loadBaseStatusDict, loadClassLevelTree, } from 'UTIL/dict';
 import { chargeType, deductType, } from 'CONST/dicts';
 

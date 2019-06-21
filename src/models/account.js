@@ -2,7 +2,6 @@ import { routerRedux } from 'dva/router'
 import { login, getLoginUserInfo, getButtonAuthTags, getUserToken, getCookieCallsPhoneCheckFail, existUserId } from 'SERVICE/common'
 import { logout } from 'SERVICE/account'
 import { urlBase } from 'CONST/config'
-import importGrowingio from 'SERVICE/growingio'
 
 /**
  * 将setGlobalForOldPage拆分成几个小的函数
@@ -103,8 +102,6 @@ export default {
       ]
 
       // console.log(user)
-      // 引入 growingio
-      importGrowingio(user)
 
       yield put({
         type: 'updateState',

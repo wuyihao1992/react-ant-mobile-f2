@@ -82,9 +82,8 @@ const gotoLoginPage = () => {
 //退出登录
 const logout = () => {
   const href = host + 'user/logout?next=/'+ subfix +'?redirect_uri=' + encodeURIComponent(window.location.origin+'/oauth2Callback')
-  // console.log('loginout', href)
   window.location.href = href
-}
+};
 
 export default {
   gotoLoginPage,
