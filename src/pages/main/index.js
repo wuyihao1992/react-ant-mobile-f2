@@ -42,7 +42,7 @@ class Main extends React.Component {
       type: 'main/init'
     });
 
-    history.push('/xxs');
+    // history.push('/xxs');
 
     if (!global.loadURL) {
       global.loadURL = this.openTabByUrl

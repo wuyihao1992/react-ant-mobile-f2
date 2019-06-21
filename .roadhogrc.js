@@ -14,10 +14,6 @@ module.exports = {
     "/eduboss": {
       "target": "https://xhboss-test.xiaojiaoyu100.com",
       "changeOrigin": true
-    },
-    "/webapp": {
-      "target": "http://localhost:8686",
-      "changeOrigin": true
     }
   },
   "extraBabelPlugins": [
