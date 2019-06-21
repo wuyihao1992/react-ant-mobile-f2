@@ -1,8 +1,5 @@
-/**
- * Created by Haolin<haolinhom@gmail.com> on 2018/12/26.
- */
 import dictConfig from './config.js';
-import showMessage from "COMPONENT/messenger/showMessage";
+import {showToast} from "COMPONENT/messenger";
 
 const _fn = {
   // 请求所需的数据字典
@@ -85,7 +82,7 @@ let dict = {
           });
         });
         const dict = yield _fn.initDict(dictList).catch((err) => {
-          showMessage(`加载数据字典错误：${err.text}`, 'error');
+          showToast(`加载数据字典错误：${err.text}`, 'error');
           if (handleErr) handleErr();
         });
         if (dict) {

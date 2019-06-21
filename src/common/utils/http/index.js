@@ -1,7 +1,7 @@
 import request from './fetch'
 import { urlBase } from 'CONST/config'
 import { errors } from 'CONST/config'
-import showMessage from 'COMPONENT/messenger/showMessage'
+import {showToast} from 'COMPONENT/messenger'
 import { gotoLoginPage } from 'SERVICE/account'
 
 /**
@@ -32,14 +32,14 @@ let loginTimeoutHandled
 const handleError = (e, noTips) => {
   if (e.errorType === 3) {
     if (!loginTimeoutHandled) {
-      showMessage(e.text)
+      showToast(e.text)
       gotoLoginPage()
       //setTimeout(gotoLoginPage, 500)
       loginTimeoutHandled = true
     }
   } else {
     if(!noTips){
-      showMessage(e.text)
+      showToast(e.text)
     }
     throw e
   }

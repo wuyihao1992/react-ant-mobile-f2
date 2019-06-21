@@ -1,4 +1,4 @@
-import showMessage from 'COMPONENT/messenger/showMessage';
+import {showToast} from 'COMPONENT/messenger';
 import ITserviceSvg from 'ASSET/imgs/ITservice.svg';
 
 function downloadQiyuScript (w, d, n, a, j) {
@@ -185,7 +185,7 @@ export async function initQiyu (userInfo) {
         console.log('init Qiyu success');
     }catch(e){
         console.error('init Qiyu error: '+ e.message);
-        showMessage(e.message, 'error')
+        showToast(e.message, 'error')
         isQiyuReady = false;
     }
     setQiyuVisibility(isQiyuReady);

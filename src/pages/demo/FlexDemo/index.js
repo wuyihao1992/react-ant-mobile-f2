@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'dva'
-import { Button, WhiteSpace } from 'antd-mobile';
+import { Button } from 'antd-mobile';
+import {showToast} from "../../../components/messenger";
 
 class FlexDemo extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class FlexDemo extends React.Component {
         return (
             <div>
                 <h1>FlexDemo</h1>
-                <Button type="warning">warning</Button><WhiteSpace />
+                <Button type="warning" onClick={() => {showToast('toast', 'error')}}>warning</Button>
             </div>
         );
     }
