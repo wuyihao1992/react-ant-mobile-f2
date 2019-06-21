@@ -1,7 +1,7 @@
 import request from './fetch'
 import { urlBase } from 'CONST/config'
 import { errors } from 'CONST/config'
-import {showToast} from 'COMPONENT/messenger'
+import {showToast} from 'COMPONENT/Messenger'
 import { gotoLoginPage } from 'SERVICE/account'
 
 /**

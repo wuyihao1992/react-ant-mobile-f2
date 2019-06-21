@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'dva'
 import { Button } from 'antd-mobile';
-import {showToast} from "../../../components/messenger";
+import {showToast} from "../../../components/Messenger";
 
 class FlexDemo extends React.Component {
     constructor(props) {
