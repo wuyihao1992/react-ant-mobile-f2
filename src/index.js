@@ -4,6 +4,7 @@ import 'moment/locale/zh-cn'
 import './index.html'
 import './GlobalEmitter'
 import 'UTIL/GlobalEvent/index.js';
+import 'ASSET/style/base.less';
 
 moment.locale('zh-cn');
 

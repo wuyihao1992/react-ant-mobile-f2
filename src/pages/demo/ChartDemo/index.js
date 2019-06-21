@@ -1,9 +1,7 @@
 import React from 'react'
 import { connect } from 'dva'
-import { Button } from 'antd-mobile';
-import {showToast} from "../../../components/messenger";
 
-class FlexDemo extends React.Component {
+class ChartDemo extends React.Component {
     constructor(props) {
         super(props);
 
@@ -15,8 +13,7 @@ class FlexDemo extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="fullW">FlexDemo</h1>
-                <Button type="warning" onClick={() => {showToast('toast', 'error')}}>warning</Button>
+                <h5>ChartDemo</h5>
             </div>
         );
     }
@@ -30,4 +27,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps)(FlexDemo)
+export default connect(mapStateToProps)(ChartDemo)

@@ -9,6 +9,15 @@ const routes = [
                 cb(null, require('PAGE/demo/FlexDemo'));
             });
         }
+    },
+    {
+        path: '/ChartDemo',
+        name: 'ChartDemo',
+        getComponent(nextState, cb) {
+            require.ensure([], (require) => {
+                cb(null, require('PAGE/demo/ChartDemo'));
+            });
+        }
     }
 ];
 
