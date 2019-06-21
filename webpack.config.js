@@ -24,7 +24,7 @@ let alias = {
   MODEL: resolveSrc('models'),
   PAGE: resolveSrc('pages'),
   SERVICE: resolveSrc('services'),
-  UTIL: resolveSrc('common/util'),
+  UTIL: resolveSrc('utils'),
   CONST: resolveSrc('constants'),
 };
 
