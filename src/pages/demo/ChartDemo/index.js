@@ -36,7 +36,7 @@ class ChartDemo extends React.Component {
             ]
         };
 
-        this.drawChart = this.drawChart.apply(this);
+        this.drawChart = this.drawChart.bind(this);
     }
 
     componentDidMount() {
