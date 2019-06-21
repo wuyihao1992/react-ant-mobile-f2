@@ -1,7 +1,4 @@
 /**
- * Created by Haolin<haolinhom@gmail.com> on 2019/2/13.
- */
-/**
  * 事件订阅/发布
  * */
 class _Event {

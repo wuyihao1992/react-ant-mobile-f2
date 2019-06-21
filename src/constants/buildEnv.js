@@ -1,3 +1,8 @@
+/**
+ * 部署环境
+ * @type {string}
+ */
+
 // 星火
 const uat = 'UAT';
 const pre = 'PRE';
