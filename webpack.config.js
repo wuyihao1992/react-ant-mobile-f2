@@ -51,6 +51,14 @@ module.exports = function(webpackConfig, env) {
     }));
 
     webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+      async:'antd-mobile',
+      minChunks(module) {
+        var context = module.context;
+        return context && context.indexOf('antd-mobile') >= 0;
+      }
+    }));
+
+    webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
       async:'echarts',
       minChunks(module) {
         var resource = module.resource;
