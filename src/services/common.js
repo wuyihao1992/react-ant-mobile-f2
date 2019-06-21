@@ -14,7 +14,6 @@ const config = {
   getUserByRoldCodesSelection: 'CommonAction/getUserByRoldCodesSelection.do', //根据角色获取用户  参数如：roleCode=TEATCHER
   getSelectOption: 'CommonAction/getSelectOption.do',  //获取字典
   // 获取字典
-  findOrganizationById: 'SystemAction/findOrganizationById.do',  //根据分公司或校区获取行政区划
   getBrenchForSelection: 'CommonAction/getBrenchForSelection.do',  //获取所有分公司
   getCampusByLoginUser: 'CommonAction/getCampusByLoginUser.do',  //所属校区
   getAllCampusForSelection: 'CommonAction/getAllCampusForSelection.do',  //获取所有校区

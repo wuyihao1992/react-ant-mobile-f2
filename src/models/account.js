@@ -3,15 +3,7 @@ import { login, getLoginUserInfo, getButtonAuthTags, getUserToken, getCookieCall
 import { logout } from 'SERVICE/account'
 import { urlBase } from 'CONST/config'
 import importGrowingio from 'SERVICE/growingio'
-import checkBrowser from 'SERVICE/checkBrowser'
-import * as Qiyu from 'SERVICE/qiyukf'
 
-/**
- * 判断是否是 Chrome 浏览器，否则阻塞进程
- * */
-checkBrowser();
-
-// 启用
 /**
  * 将setGlobalForOldPage拆分成几个小的函数
  * 暂时保留setGlobalForOldPage，待确认无辅助用后删除
@@ -114,9 +106,6 @@ export default {
       // 引入 growingio
       importGrowingio(user)
 
-      // 引入 qiyukf
-      Qiyu.initQiyu(user)
-
       yield put({
         type: 'updateState',
         payload: {
@@ -155,7 +144,6 @@ export default {
         }
         //获取来电token验证失败的数据，同时打开新窗体输入客户信息
         const map = yield call(getCookieCallsPhoneCheckFail)
-        // console.log('map:', map)
         if (map) {
           map.forEach(key => {
             const value = map[key]

@@ -9,7 +9,6 @@ import {
   twoTeacherPre,
   twoTeacher,
 } from 'CONST/buildEnv';
-import * as Qiyu from 'SERVICE/qiyukf'
 
 const subfixConfig = {
   xh: 'oauth2/boss',
@@ -81,9 +80,7 @@ const gotoLoginPage = () => {
 };
 
 //退出登录
-//const logout = () => window.location.href = `${urlBase}j_spring_security_logout`  //退出登录（旧）
 const logout = () => {
-  Qiyu.exitQiyu();
   const href = host + 'user/logout?next=/'+ subfix +'?redirect_uri=' + encodeURIComponent(window.location.origin+'/oauth2Callback')
   // console.log('loginout', href)
   window.location.href = href

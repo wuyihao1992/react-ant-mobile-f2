@@ -1,3 +1,7 @@
+/**
+ * 数据分析
+ * @param user
+ */
 let importGrowingio = function(user){
   let userId = user.userId + '0';
   let script = document.getElementById('growingIO')
