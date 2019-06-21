@@ -29,7 +29,7 @@ let alias = {
 };
 
 module.exports = function(webpackConfig, env) {
-  // 对roadhog默认配置进行操作，比如：
+  // 对roadhog默认配置进行操作
   if (env === 'production' && !/\.dll\.js$/.test(webpackConfig.output.filename)) {
     webpackConfig.module.rules.forEach((rule) => {
       if (String(rule.test) === '/\\.less$/' || String(rule.test) === '/\\.css$/'){
@@ -39,6 +39,7 @@ module.exports = function(webpackConfig, env) {
         });
       }
     });
+
     webpackConfig.plugins.push(new webpack.HashedModuleIdsPlugin());
     webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -48,13 +49,6 @@ module.exports = function(webpackConfig, env) {
         resource.match(/\.js$/)
       )
     }));
-    webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
-      async:'antd',
-      minChunks(module) {
-        var context = module.context;
-        return context && context.indexOf('antd') >= 0;
-      }
-    }));
 
     webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
       async:'echarts',
@@ -63,17 +57,19 @@ module.exports = function(webpackConfig, env) {
         return resource && (resource.indexOf('echarts') >= 0 || resource.indexOf('zrender') >= 0);
       }
     }));
+
     webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
       children: true,
       // (选择所有被选 chunks 的子 chunks)
       async: true,
       // (创建一个异步 公共chunk)
-
       minChunks: 2,
     }));
+
     webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest'
     }));
+
     webpackConfig.plugins.push(new InlineManifestWebpackPlugin({name: 'webpackManifest'}));
     process.env.ANALYSE === 'true' && webpackConfig.plugins.push(new BundleAnalyzerPlugin({
       analyzerMode: 'static'

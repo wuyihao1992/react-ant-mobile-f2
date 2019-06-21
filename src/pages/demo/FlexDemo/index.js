@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'dva'
+import { Button, WhiteSpace } from 'antd-mobile';
 
 class FlexDemo extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class FlexDemo extends React.Component {
         return (
             <div>
                 <h1>FlexDemo</h1>
+                <Button type="warning">warning</Button><WhiteSpace />
             </div>
         );
     }
